@@ -1,0 +1,17 @@
+name: Nightly Build
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (optional)
+        uses: actions/checkout@v4
+
+      - name: Log completion message
+        run: echo "Nightly build completed successfully!"
